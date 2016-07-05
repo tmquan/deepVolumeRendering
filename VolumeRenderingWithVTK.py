@@ -26,6 +26,7 @@ reader.Update()
 mapper.SetInputConnection(reader.GetOutputPort())
 mapper.SetBlendModeToMaximumIntensity()
 
+
 # Set up the Property
 colorFunc.AddRGBSegment(0.0,   0.0, 0.0, 0.0, 
 			255.0, 1.0, 1.0, 1.0)
@@ -38,20 +39,22 @@ property.SetColor(colorFunc)
 property.SetScalarOpacity(opacityFunc)
 property.SetInterpolationTypeToLinear()
 
+
 # Set up the Volume 
 volume.SetMapper(mapper)
 volume.SetProperty(property)
-
 # Set up the renderer
 render 	= vtkRenderer()
 render.SetBackground(0,0,0)
 # Add volume
 render.AddVolume(volume)
 
+
 # Set up the windows
 renWin	= vtkRenderWindow()
 renWin.SetSize(512, 512)
 renWin.AddRenderer(render)
+
 
 # Set up the interactor
 iren 	= vtkRenderWindowInteractor()
