@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # This file is a part of Dolfin project
-__author__ 		= "Tran Minh Quan"
+__author__ 	= "Tran Minh Quan"
 __license__ 	= "GPL"
 __version__ 	= "0.0.1"
-__date__		= "2016-07-06"
-__email__ 		= "quantm@unist.ac.kr"
+__date__	= "2016-07-06"
+__email__ 	= "quantm@unist.ac.kr"
 
 from vtk import *
 
@@ -28,7 +28,7 @@ mapper.SetBlendModeToMaximumIntensity()
 
 # Set up the Property
 colorFunc.AddRGBSegment(0.0,   0.0, 0.0, 0.0, 
-						255.0, 1.0, 1.0, 1.0)
+			255.0, 1.0, 1.0, 1.0)
 opacityWindow = 4096
 opacityLevel  = 1024
 opacityFunc.AddSegment(opacityLevel - 0.5*opacityWindow, 0.0,
